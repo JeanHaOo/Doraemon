@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{padding:0;margin:0}
+			.wrap{width:300px;margin:150px auto}
+			.head{position: relative;
+			      width:354px;
+			      height:323px;
+			      border:2px solid #000;
+			      border-top-left-radius: 176px 170px;
+			      border-top-right-radius:180px 180px;
+			      border-bottom-left-radius:116px 155px;
+			      border-bottom-right-radius:90px 128px;
+			      background:#00a0e8;
+			      transform: rotate(-5deg);
+			      }
+			.face{width:320px;
+			      height:251px;
+			      border-top-left-radius: 160px 125px;
+			      border-top-right-radius:160px 125px;
+			      border-bottom-left-radius:78px 128px;
+			      border-bottom-right-radius:78px 130px;
+				  position: absolute;
+			      background:#fff;
+			      border:2px solid #000;
+			      top:61px;left:22px;
+			      transform: rotate(1deg);
+			      } 
+			 .eyes{position: relative;}     
+			 .eyes .eye_left,.eyes .eye_right{width:72px;
+			      height:94px;
+			      border:2px solid #000;
+			 	  border-top-left-radius: 36px 52px;
+			      border-top-right-radius:37px 48px;
+			      border-bottom-left-radius:40px 45px;
+			      border-bottom-right-radius:40px 43px;
+			      position: absolute;
+			      left:70px;
+			      top:-47px;
+			      background:#fff;
+			 } 
+			 .eyes .eye_right{
+			 	left:146px;
+			 	top:-51px;
+			 	transform: rotate(-12deg);
+			 }
+			 .eyes .eye_left .black_eye{
+			 	width:20px;height:35px;
+			 	background:#211723;
+			 	border-top-left-radius: 13px 21px;
+			    border-top-right-radius:13px 20px;
+			    border-bottom-left-radius:13px 21px;
+			    border-bottom-right-radius:14px 21px;
+			    position: absolute;
+			    left: 19px;top: 33px;
+			 	border:2px solid #000;
+			 }
+			  .eyes .eye_left .black_eye:after{content:"";
+			      width:10px;height:16px;
+			      background:#fff;
+			      border-top-left-radius: 6px 9px;
+			      border-top-right-radius:6px 10px;
+			      border-bottom-left-radius:6px 10px;
+			      border-bottom-right-radius:6px 9px;
+			      position:absolute;
+			      left:4px;top:7px;
+			      }
+			      .eyes .eye_right .smile_eye{
+			      	    width: 38px;
+					    height: 38px;
+					    border: 2px solid #000;
+					    border-radius: 50%;
+					    position: absolute;
+					    top: 38px;
+					    left: 10px
+			      }
+	/*眼睛*/		    .eyes .eye_right .smile_eye:after{content:"";
+			        content: "";
+				    width: 47px;
+				    height: 26px;
+				    position: absolute;
+				    left: 10px;
+				    top: 18px;
+				    background: #fff;
+				    transform: rotate(12deg) translateX(-15px);
+			       }
+	/*鼻子*/		   .nose{width:54px;height:53px;
+	                     border-radius: 50%;
+	                     background:#e1002a;
+	                     border:2px solid #000;
+	                     position:absolute;
+	                     top:27px;left:121px;
+	                    } 
+	                .nose:before{content:"";
+	                      width:18px;
+	                      height:18px;
+	                      background:#fff;
+	                      position:absolute;
+	                      top:15px;
+	                      left:15px;
+	                      border-radius: 50%;
+	                      box-shadow: 0 0 10px #cf062c;
+	                 }
+	                 .nose:after{content:"";
+	                      width:3px;height:44px;
+	                      background:#160e0c;
+	                      position: absolute;
+	                      bottom:-45px;
+	                      left:50%;
+	                 } 
+	/*胡须*/                 .beard{position: relative;}
+	                 .beard span{position:absolute;
+	                             width:95px;
+	                             height:3px;
+	                             display:inline-block;
+	                             background:#251a1a
+	                 }
+	                 .beard span:first-child{
+	                 	     left: 5px;
+							 top: 64px;
+							 transform: rotate(20deg);
+	                 }
+	                 .beard span:nth-child(2){
+	                 	    left: -5px;
+                             top: 94px;
+                             transform: rotate(10deg);  
+	                 }
+	                  .beard span:nth-child(3){
+	                  	    width:75px;
+	                 	    left:12px;
+                             top: 125px;
+                             transform: rotate(-8deg);  
+	                 }
+	                 .beard span:nth-child(4){
+	                  	        width: 105px;
+							    right: 17px;
+							    top: 62px;
+							    transform: rotate(-25deg);  
+	                 } 
+	                 .beard span:nth-child(5){
+	                  	        width: 110px;
+							    right: -2px;
+							    top: 86px;
+							    transform: rotate(-10deg);  
+	                 }
+	                   .beard span:nth-child(6){
+	                  	        width: 90px;
+							    right: 8px;
+							    top: 123px;
+							    transform: rotate(5deg);  
+	                 } 
+	  /*嘴巴*/            .mouse{position: relative;
+	                       width:235px;height:190px;
+	                       background:#E1002A;
+	                       border-radius: 50%;
+	                       top:52px;left:42px;
+	                       z-index: -1;
+	                           transform: rotate(-2deg);
+	                           border-bottom:2px solid #000;
+	                          
+	                           overflow: hidden;
+	                           
+	                  }
+	                  .mouse:before{content:"";
+	                           content: "";
+							    width: 237px;
+							    height: 103px;
+							    background: #fff;
+							    position: absolute;
+							    top: -7px;
+							    left: -1px;
+							    border-bottom-left-radius: 14%;
+							    border-bottom-right-radius: 20%;
+							    border-bottom:2px solid #000
+	                  }
+	                  .mouse .tongue{width: 173px;
+							    height: 94px;
+							    border-radius: 50%;
+							    background: #ee7c1b;
+							    border-top: 2px solid #000;
+							    position: absolute;
+							    bottom: -33px;
+							    left: 31px;
+	                   }
+	     /*颈*/       .neck{position: relative;
+	                         width:225px;
+	                         height:18px;
+	                         border:2px solid #000;
+	                         background:#E1002A;
+	                         left:51px;
+	                         top:57px;
+	                         border-radius:10px;
+	                         transform: rotate(-1deg);
+	                         z-index: 555;}      
+	    /*身体部分*/             .body_d{position:relative;background:#00A0E8;
+	                         width:240px;
+	                         height:165px;
+	                         background:#00A0E8;
+	                         bottom:-6px;left:97px;
+	                         transform: rotate(-5deg);
+	                         z-index: -2;
+	                         }
+	     /*手*/.body_d .hand{position:absolute}  
+	                 .body_d .hand .left_hand{width:80px;
+	                                    width: 115px;
+									    position: absolute;
+									    height: 45px;
+									    border-radius: 30px;
+									    left: -83px;
+									    top: -14px;
+									    border-top: 2px solid #000;
+									    border-bottom: 2px solid #000;
+									    background: #00A0E8;
+									    transform: rotate(16deg);}
+	                 .body_d .hand .left_hand:before{content:"";
+	                                    width:64px;height:64px;
+	                                    border:2px solid #000;
+	                                    border-radius: 50%;
+	                                    position: absolute;
+	                                    left:-31px;
+	                                    top:-14px;
+	                                    background:#fff;
+	                          }  
+	                 .body_d .hand .left_hand:after{    content: "";
+									    width: 2px;
+									    height: 58px;
+									    background: #000;
+									    position: absolute;
+									    right: 16px;
+									    top: 45px;
+									    transform: rotate(-15deg)
+	                    }      
+	                  .body_d .hand .right_hand{
+	                  	                width: 140px;
+									    height: 69px;
+									    border-bottom: 2px solid #000;
+									    border-right: 2px solid #000;
+									    border-bottom-right-radius: 137px 40px;
+									    position: absolute;
+									    right: -333px;
+									    top: -56px;
+									    transform: rotate(-48deg);
+									    background: #00A0E8;
+									    z-index: -2;
+	                  }
+	                  .body_d .hand .right_hand:before{content:'';
+	                                    width:64px;height:64px;
+	                                    border:2px solid #000;
+	                                    border-radius: 50%;
+	                                    position: absolute;
+	                                    right:-31px;
+	                                    top:-14px;
+	                                    background:#fff;
+	                  }
+	                  .body_d .hand .right_hand:after{
+	                  	        content: "";
+							    width: 2px;
+							    height: 36px;
+							    background: #000;
+							    position: absolute;
+							    bottom: 0;
+							    left: 22px;
+							    transform: rotate(50deg) translateY(39px);
+	                  }
+	                  
+	     /*口袋*/             .pocket_box{
+	                  	        position: relative;
+							    width: 177px;
+							    height: 165px;
+							    border-top-left-radius: 96px 85px;
+							    border-top-right-radius: 96px 83px;
+							    border-bottom-left-radius: 100px 82px;
+							    border-bottom-right-radius: 96px 78px;
+							    border: 2px solid #000;
+							    left: 34px;
+							    top: -29px;
+							    background: #fff;
+	                  }
+	                  
+	      /*铃铛*/     .pocket_box .bell{position: absolute;
+	                  	        left:58px;top:24px;
+	                  	        width:54px;
+	                  	        height:54px;
+	                  	        background:#ffe43a;
+	                  	        border: 2px solid #000;
+	                  	        z-index: 66666;
+	                  	         border-top-left-radius: 25px 25px;
+							    border-top-right-radius: 26px 26px;
+							    border-bottom-left-radius: 31px 25px;
+							    border-bottom-right-radius: 32px 25px;
+	                  }
+	                  .pocket_box .bell:before{content:"";
+	                                content: "";
+								    width: 63px;
+								    height: 7px;
+								    border: 2px solid #000;
+								    border-bottom: none;
+								    border-top-left-radius: 58px 12px;
+								    background: #ffe43a;
+								    left: -8px;
+								    top: 10px;
+								    position: absolute;
+								    border-top-right-radius: 54px 12px;
+	                   }
+	       /*口袋*/  .pocket_box .bell:after{content:"";
+	                                content: "";
+								    width: 63px;
+								    height: 7px;
+								    border-top:3px solid #000;
+								    border-top-left-radius: 58px 12px;
+								    top: 16px;left:-6px;
+								    position: absolute;
+								    border-top-right-radius: 54px 12px;
+	                   }
+	                  
+	                   .bell .bell_cirlce{    width: 18px;
+								    height: 18px;
+								    border-radius: 15px;
+								    background: #7c6b56;
+								    border: 2px solid #000;
+								    position: absolute;
+								    top: 19px;
+								    left: 16px;
+								    transform: skewX(5deg) rotateX(-54deg);
+						 }
+						.bell .bell_cirlce:after{    content: '';
+								    width: 2px;
+								    height: 34px;
+								    position: absolute;
+								    bottom: -33px;
+								    left: 8px;
+								    background: #333;} 
+	                    .pocket_box .pocket{
+							width: 152px;
+						    height: 138px;
+						    border: 2px solid #000;
+						    border-bottom-left-radius: 150px 103px;
+						    border-bottom-right-radius: 110px 117px;
+						    border-top-left-radius: 120px 103px;
+						    border-top-right-radius: 92px 117px;
+						    position: absolute;
+						    bottom: 9px;
+						    left: 12px;
+						    background: #fff;
+	                    }
+	                   .pocket_box .pocket:before{        content: "";
+						    width: 156px;
+						    height: 63px;
+						    position: absolute;
+						    top: 10px;
+						    left: -2px;
+						    z-index: 0;
+						    border-bottom: 2px solid #000;
+						    background: #fff;
+						    border-radius: 19% 24% 10% 6%;
+	                   } 
+	                             
+/*脚踝的部分*/.feet{position:relative}
+			 .feet .feet_left{    width: 63px;
+			    height: 82px;
+			    border-left: 2px solid #000;
+			    border-bottom: 2px solid #000;
+			    position: absolute;
+			    top: 117px;
+			    left: -56px;
+			    background: #00A0E8;
+			    transform: rotatex(-5deg) skew(5deg);
+			    z-index: -1;
+			   border-radius: 45% 35% 40% 45%;
+			 } 
+			 .feet .feet_bottom{
+			 	width: 77px;
+			    height: 16px;
+			    border-right: 2px solid #000;
+			    border-bottom: 2px solid #000;
+			    border-bottom-right-radius: 52px 23px;
+			    position: absolute;
+			    left: 2px;
+			    top: 179px;
+			    background: #00A0E8;
+			    transform: rotate(6deg);
+			 }
+			 .feet .feet_right{
+				width: 82px;
+			    height: 30px;
+			    border-left: 2px solid #000;
+			    border-top: 2px solid #000;
+			    border-top-left-radius: 82px 30px;
+			    position: absolute;
+			    left: 74px;
+			    top: 177px;
+			    transform: rotate(21deg);
+			    background: #fff;
+			 }
+	/*脚*/	 .foot{position: relative;}
+			 .foot .left_foot{
+			 	        position: absolute;
+					    left: 47px;
+					    top: -63px;
+					    width: 95px;
+					    height: 118px;
+					    border: 3px solid #000;
+					    background: #fff;
+					    z-index: -5;
+					    border-radius: 54% 68% 54% 80%;
+					    transform: rotate(30deg);
+			 }  
+			 .foot .right_foot{
+			 	        width: 104px;
+					    height: 143px;
+					    position: absolute;
+					    right: -109px;
+					    bottom: -54px;
+					    border-radius: 100% 100% 93% 94%;
+					    border: 3px solid #000;
+					    transform: rotateY(15deg) skew(-6deg);
+					    z-index: 3 background: #fff;
+					    background: #fff;
+			 }   
+			 .groundShadow{
+			 	    width: 200px;
+				    height: 2px;
+				    border-radius: 50%;
+				    background: rgba(0,0,0,0.3);
+				    box-shadow: 0 0 2px 4px rgba(0,0,0,0.3);
+				    position: relative;
+				    top: 75px;
+				    left:129px;
+			 }     
+		</style>
+	</head>
+	<body>
+	  <div class="wrap">
+         <div class="head"> <!--头部-->
+          	 <div class="face"> <!--脸-->
+		        <div class="eyes"><!--眼睛-->
+		           <div class="eye_left">
+		           	 <div class="black_eye"></div>
+		           </div>	
+		           <div class="eye_right">
+		           	 <div class="smile_eye"></div>
+		           </div>	
+		        </div>   
+		        <div class="nose"></div>   <!--鼻子-->
+		        <div class="beard">  <!--胡须-->
+		           <span></span>
+		           <span></span>
+		           <span></span>
+		           <span></span>
+		           <span></span>
+		           <span></span>
+		        </div> 
+		        <div class="mouse"> <!--嘴巴-->
+		        	<div class="tongue"></div>
+		        </div>  
+		        <div class="neck"></div>   <!--颈-->
+             </div>
+           </div>
+          <div class="body_d"><!--身体-->
+	         <div class="hand">
+	         	<div class="left_hand"></div>
+	         	<div class="right_hand"></div>
+	         </div>
+	         <div class="pocket_box">
+	         	<div class="bell">
+	         		<div class="bell_cirlce"></div>
+	         	</div>
+	         	<div class="pocket"></div>
+	            <div class="feet">
+	            	<div class="feet_left"></div>
+	            	<div class="feet_bottom"></div>
+	            	<div class="feet_right"></div>
+	            </div>
+	         </div>
+           </div>
+          <div class="foot"><!--脚-->
+	          <div class="left_foot"></div>
+	          <div class="right_foot"></div>
+           </div>
+	      <div class="groundShadow"></div><!--鞋底阴影-->
+	  </div>	
+	</body>
+</html>
